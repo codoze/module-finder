@@ -6,8 +6,8 @@ import Vue from 'vue'
 import App from './App'
 import store from './store'
 
-import filters from './main.filter'
-Vue.filter('date', filters.date)
+import { date } from './main.filter'
+Vue.filter('date', date)
 
 // require('kube/dist/css/kube.css')
 require('./style/app.scss')

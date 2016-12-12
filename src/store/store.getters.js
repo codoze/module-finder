@@ -12,4 +12,4 @@ export const hasPrevious = state => state.page > 1
 
 export const notFound = state => state.notFound
 
-export const empty = state => !state.notFound && !state.keyword
+export const empty = state => !state.results && !state.keyword

@@ -32,6 +32,7 @@ import Spinner from 'components/shared/spinner'
 import { mapGetters } from 'vuex'
 
 export default {
+  name: 'loading-screen',
   components: {
     Spinner
   },

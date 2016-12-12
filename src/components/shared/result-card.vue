@@ -24,9 +24,10 @@ box-shadow: $shadow-z1;
   color: $color-primary;
 }
 &--links{
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   h6 {
     margin: 0;
+    margin-right: 10px;
   }
 }
 }
@@ -34,7 +35,7 @@ box-shadow: $shadow-z1;
 </style>
 
 <template>
-  <section @click="open" class="result-card">
+  <section v-if="data" @click="open" class="result-card">
     <div class="result-card--header fx-row fx-space-between-center">
       <div class="fx-row fx-start-center">
         <h4 class="result-card--title">{{data.name}}</h4>
@@ -47,9 +48,11 @@ box-shadow: $shadow-z1;
 
     <div v-if="expand" class="result-card--links fx-row fx-start-center">
       <h6>links:</h6>
-      <link-chip :href="data.homepage" text="homepage"></link-chip>
-      <link-chip :href="data.package_manager_url" text="package manager"></link-chip>
-      <link-chip :href="data.repository_url" text="repository"></link-chip>
+      <div>
+        <link-chip :href="data.homepage" text="homepage"></link-chip>
+        <link-chip :href="data.package_manager_url" text="package manager"></link-chip>
+        <link-chip :href="data.repository_url" text="repository"></link-chip>
+      </div>
     </div>
 
     <slot></slot>

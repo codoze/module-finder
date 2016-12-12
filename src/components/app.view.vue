@@ -1,7 +1,3 @@
-<style scoped lang="scss">
-
-</style>
-
 <template>
   <section>
     <header-box></header-box>
@@ -11,6 +7,7 @@
       <pagination class="view-container"></pagination>
     </div>
     <result-modal></result-modal>
+    <footer-box></footer-box>
   </section>
 </template>
 
@@ -21,8 +18,7 @@ import ResultModal from 'components/shared/result-modal'
 import ResultList from 'components/shared/result-list'
 import Pagination from 'components/shared/pagination'
 import LoadingScreen from 'components/shared/loading-screen'
-
-import { mapGetters } from 'vuex'
+import FooterBox from 'components/shared/footer-box'
 
 export default {
   components: {
@@ -31,10 +27,8 @@ export default {
     ResultModal,
     ResultList,
     Pagination,
-    LoadingScreen
-  },
-  computed: mapGetters([
-    'isLoading'
-  ])
+    LoadingScreen,
+    FooterBox
+  }
 }
 </script>

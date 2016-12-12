@@ -1,8 +1,8 @@
 const apiKey = 'aa72e2586e7572ee5ae80fcd4c01dc87'
 
-export const getData = ({ commit, state }, { keyword, page = 1 }) => {
+export const getData = ({ commit, state }, { keyword = '', page = 1 }) => {
   commit('LOADING')
-  window.fetch(`https://libraries.io/api/search?q=${keyword}&api_key=${apiKey}&per_page=${state.perPage}&page=${page}`)
+  window.fetch(`https://libraries.io/api/search?api_key=${apiKey}&per_page=${state.perPage}&page=${page}&q=${keyword}`)
   .then((res) => res.json())
   .then((data) => {
     if (data.length) {

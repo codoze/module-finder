@@ -1,5 +1,5 @@
 export const state = {
-  perPage: 10,
+  perPage: 5,
   results: null,
   selectedItem: null,
   page: null,

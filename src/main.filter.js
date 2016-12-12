@@ -1,13 +1,6 @@
-export default {
-  capitalize: function (value) {
-    if (!value) return ''
-    value = value.toString()
-    return value.charAt(0).toUpperCase() + value.slice(1)
-  },
-
-  date: function (value) {
-    if (!value) return ''
-    value = new Date(value)
-    return value.toLocaleString()
-  }
+export function date (value) {
+  if (!value) return ''
+  let d = new Date(value)
+  // return value.toLocaleString()
+  return `${d.getDate()}.${d.getMonth()}.${d.getFullYear()}`
 }

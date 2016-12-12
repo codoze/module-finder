@@ -1,0 +1,31 @@
+export default [{
+  'name': 'hapi-ember',
+  'platform': 'NPM'
+}, {
+  'name': 'api.js',
+  'platform': 'NPM'
+}, {
+  'name': 'h2o2',
+  'platform': 'NPM'
+}, {
+  'name': 'glue',
+  'platform': 'NPM'
+}, {
+  'name': 'vision',
+  'platform': 'NPM'
+}, {
+  'name': 'rejoice',
+  'platform': 'NPM'
+}, {
+  'name': 'inert',
+  'platform': 'NPM'
+}, {
+  'name': 'hapi-socketio-redis-chat-example',
+  'platform': 'NPM'
+}, {
+  'name': 'therealyou',
+  'platform': 'NPM'
+}, {
+  'name': 'hapi-resource',
+  'platform': 'NPM'
+}]

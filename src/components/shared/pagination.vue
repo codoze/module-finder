@@ -2,7 +2,9 @@
 <style scoped lang="scss">
 @import "../../style/variables";
 .pagination{
-  width: 100%
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 </style>
 

@@ -2,7 +2,7 @@
 <style scoped lang="scss">
 @import "../../style/variables";
 .link-chip {
-  margin: 0 4px;
+  margin: 4px;
   box-shadow: $shadow-z1;
 
   font-size: 18px;
@@ -13,8 +13,8 @@
   // border-radius: 56px;
   transition: 200ms;
   text-transform: capitalize;
-  i,
-  span {
+  &--icon,
+  &--text {
     vertical-align: middle;
   }
   &:hover {
@@ -27,8 +27,8 @@
 
 <template>
     <a :href="href" class="link-chip button tiny round" role="button" target="_blank" rel="noopener">
-      <i class="material-icons md-18">&#xE157;</i>
-      <span v-if="text">{{text}}</span>
+      <i class="link-chip--icon material-icons md-18">&#xE157;</i>
+      <span class="link-chip--text">{{text}}</span>
     </a>
 </template>
 

@@ -1,5 +1,6 @@
 <style scoped lang="scss">
 .result-list {
+  min-height: 100vh;
   &--item {
     cursor: pointer;
   }
@@ -18,7 +19,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 import ResultCard from 'components/shared/result-card'
 import Placeholder from 'components/shared/placeholder'
@@ -28,10 +29,18 @@ export default {
     ResultCard,
     Placeholder
   },
+  created: function () {
+    this.getData({})
+  },
   computed: mapGetters([
     'results',
     'empty',
     'notFound'
-  ])
+  ]),
+  methods: {
+    ...mapActions([
+      'getData'
+    ])
+  }
 }
 </script>
