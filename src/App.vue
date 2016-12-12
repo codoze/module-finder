@@ -1,14 +1,14 @@
 <template>
-  <hello></hello>
+  <container></container>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Container from './components/app.view'
 
 export default {
   // name: 'app',
   components: {
-    Hello
+    Container
   }
 }
 </script>

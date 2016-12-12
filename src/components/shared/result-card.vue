@@ -9,6 +9,11 @@ margin-top: 10px;
 padding: 20px;
 border: $porcelaine 1px solid;
 border-radius: 2px;
+box-shadow: $shadow-z0;
+transition: 300ms;
+&:hover {
+box-shadow: $shadow-z1;
+}
 &--header {
   min-height: 40px;
 }
@@ -17,6 +22,12 @@ border-radius: 2px;
   padding-right: 10px;
   text-transform: capitalize;
   color: $color-primary;
+}
+&--links{
+  margin-bottom: 26px;
+  h6 {
+    margin: 0;
+  }
 }
 }
 
@@ -29,14 +40,21 @@ border-radius: 2px;
         <h4 class="result-card--title">{{data.name}}</h4>
         <span class="label round primary">{{data.latest_release_number}}</span>
       </div>
-      <link-chip :href="data.homepage" text="home"></link-chip>
+      <tag-ship :text="data.platform"></tag-ship>
     </div>
 
-    <h6>{{data.description}}</h6>
+    <p>{{data.description}}</p>
 
-    <tag-ship v-for="tag in data.keywords" :text="tag"></tag-ship>
+    <div v-if="expand" class="result-card--links fx-row fx-start-center">
+      <h6>links:</h6>
+      <link-chip :href="data.homepage" text="homepage"></link-chip>
+      <link-chip :href="data.package_manager_url" text="package manager"></link-chip>
+      <link-chip :href="data.repository_url" text="repository"></link-chip>
+    </div>
 
-    <slot name="versions"></slot>
+    <slot></slot>
+
+    <tag-ship v-if="expand" v-for="tag in data.keywords" :text="tag"></tag-ship>
 
     <card-footer :data="data"></card-footer>
 
@@ -56,7 +74,7 @@ export default {
     CardFooter,
     TagShip
   },
-  props: ['data'],
+  props: ['data', 'expand'],
   data () {
     return {
       keyword: ''

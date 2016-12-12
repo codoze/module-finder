@@ -12,7 +12,7 @@
 <template>
   <section class="result-list fx-col">
     <placeholder v-if="empty" icon="search" text="try to find modules by keyword" class="result-list--placeholder"></placeholder>
-    <placeholder v-if="notFound" icon="error" text="can't find somthing here" class="result-list--placeholder"></placeholder>
+    <placeholder v-if="notFound" icon="error_outline" text="it's empty here" class="result-list--placeholder"></placeholder>
     <result-card v-for="item in results" :data="item" class="result-list--item"></result-card>
   </section>
 </template>

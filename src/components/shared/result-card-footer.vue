@@ -7,7 +7,7 @@
 padding-top: 4px;
 border-top: $porcelaine 1px solid;
   &--item{
-    min-width: 60px;
+    margin: 0 6px;
     i, span {
       color: $mid-gray;
       vertical-align: middle;
@@ -30,9 +30,15 @@ border-top: $porcelaine 1px solid;
       <!-- <div class="card-footer--item">
         <i class="material-icons md-18">&#xE8E5;</i><span>{{data.rank}}</span>
       </div> -->
+
+      <div v-show="data.language" class="card-footer--item">
+        <i class="material-icons md-18">&#xE86F;</i><span>{{data.language}}</span>
+      </div>
+
       <div class="card-footer--item">
         <i class="material-icons md-18">&#xE8D0;</i><span>{{data.stars}}</span>
       </div>
+
       <!-- <div class="card-footer--item">
         <i class="material-icons md-18">&#xE80D;</i><span>{{data.forks}}</span>
       </div> -->

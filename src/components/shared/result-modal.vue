@@ -73,21 +73,7 @@
 <template>
   <transition name="bounce">
     <section @click.self="close" v-if="show" class="result-modal fx-row fx-center-center">
-      <result-card :data="data" class="result-modal--card">
-        <!-- <table slot="versions" class="flat versions-list">
-          <thead>
-              <tr>
-                  <th>version</th>
-                  <th>published at</th>
-              </tr>
-          </thead>
-          <tbody v-for="item in data.versions">
-              <tr>
-                  <td>{{item.number}}</td>
-                  <td>{{item.published_at | date}}</td>
-              </tr>
-          </tbody>
-        </table> -->
+      <result-card :data="data" expand="true" class="result-modal--card">
       </result-card>
     </section>
   </transition>

@@ -25,7 +25,6 @@ import LoadingScreen from 'components/shared/loading-screen'
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'hello',
   components: {
     HeaderBox,
     ResultCard,
