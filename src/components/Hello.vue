@@ -1,9 +1,11 @@
 <style scoped lang="scss">
+
 </style>
 
 <template>
   <section>
     <header-box></header-box>
+    <loading-screen></loading-screen>
     <div class="fx-col fx-start-center">
       <result-list class="view-container"></result-list>
       <pagination class="view-container"></pagination>
@@ -18,6 +20,9 @@ import ResultCard from 'components/shared/result-card'
 import ResultModal from 'components/shared/result-modal'
 import ResultList from 'components/shared/result-list'
 import Pagination from 'components/shared/pagination'
+import LoadingScreen from 'components/shared/loading-screen'
+
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'hello',
@@ -26,7 +31,11 @@ export default {
     ResultCard,
     ResultModal,
     ResultList,
-    Pagination
-  }
+    Pagination,
+    LoadingScreen
+  },
+  computed: mapGetters([
+    'isLoading'
+  ])
 }
 </script>

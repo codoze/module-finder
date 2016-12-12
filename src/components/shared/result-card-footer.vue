@@ -27,15 +27,15 @@ border-top: $porcelaine 1px solid;
       <div class="card-footer--item card-footer__date flex">
         <i class="material-icons md-18">&#xE192;</i><span>{{data.latest_release_published_at | date}}</span>
       </div>
-      <div class="card-footer--item">
+      <!-- <div class="card-footer--item">
         <i class="material-icons md-18">&#xE8E5;</i><span>{{data.rank}}</span>
-      </div>
+      </div> -->
       <div class="card-footer--item">
         <i class="material-icons md-18">&#xE8D0;</i><span>{{data.stars}}</span>
       </div>
-      <div class="card-footer--item">
+      <!-- <div class="card-footer--item">
         <i class="material-icons md-18">&#xE80D;</i><span>{{data.forks}}</span>
-      </div>
+      </div> -->
   </section>
 </template>
 

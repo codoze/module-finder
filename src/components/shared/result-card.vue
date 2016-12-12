@@ -36,6 +36,8 @@ border-radius: 2px;
 
     <tag-ship v-for="tag in data.keywords" :text="tag"></tag-ship>
 
+    <slot name="versions"></slot>
+
     <card-footer :data="data"></card-footer>
 
   </section>

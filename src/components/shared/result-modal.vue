@@ -28,7 +28,7 @@
     .result-modal--card {
       animation: slide-out .3s;
     }
-  
+
 }
 @keyframes fade-in {
   0% {
@@ -63,20 +63,37 @@
   }
 }
 
+.versions-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
 </style>
 
 <template>
   <transition name="bounce">
     <section @click.self="close" v-if="show" class="result-modal fx-row fx-center-center">
-      <result-card :data="data" class="result-modal--card"></result-card>
+      <result-card :data="data" class="result-modal--card">
+        <!-- <table slot="versions" class="flat versions-list">
+          <thead>
+              <tr>
+                  <th>version</th>
+                  <th>published at</th>
+              </tr>
+          </thead>
+          <tbody v-for="item in data.versions">
+              <tr>
+                  <td>{{item.number}}</td>
+                  <td>{{item.published_at | date}}</td>
+              </tr>
+          </tbody>
+        </table> -->
+      </result-card>
     </section>
   </transition>
 </template>
 
 <script>
-// import LinkChip from 'components/shared/link-chip'
-// import CardFooter from 'components/shared/result-card-footer'
-// import TagShip from 'components/shared/tag-chip'
 import ResultCard from 'components/shared/result-card'
 
 import { mapGetters, mapActions } from 'vuex'
@@ -85,9 +102,6 @@ export default {
   name: 'result-modal',
   components: {
     ResultCard
-    // LinkChip,
-    // CardFooter,
-    // TagShip
   },
   props: ['data'],
   data () {

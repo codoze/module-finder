@@ -12,6 +12,7 @@ export const SET_DATA = (state, { data, keyword, page, notFound = false }) => {
   state.keyword = keyword
   state.page = page
   state.notFound = notFound
+  state.loading = false
 }
 
 export const SET_SELECTED_ITEM = (state, data) => {

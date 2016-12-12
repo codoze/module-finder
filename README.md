@@ -1,6 +1,6 @@
-# bower-clone
+# module-finder
 
-> bower-clone
+> module-finder
 
 ## Build Setup
 

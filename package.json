@@ -1,7 +1,7 @@
 {
-  "name": "bower-clone",
+  "name": "module-finder",
   "version": "1.0.0",
-  "description": "bower-clone",
+  "description": "module-finder",
   "author": "mouafa ahmed",
   "private": true,
   "scripts": {
